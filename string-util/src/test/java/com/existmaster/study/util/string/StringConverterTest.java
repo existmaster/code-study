@@ -33,4 +33,15 @@ public class StringConverterTest {
         assertNotNull(result);
         assertThat(result, is("0x14"));
     }
+
+    @Test
+    public void Hex_String_to_int(){
+
+        String normal = "0x14";
+
+        int result = StringConverter.hexStringToInt(normal);
+
+        assertNotNull(result);
+        assertThat(result, is(20));
+    }
 }
