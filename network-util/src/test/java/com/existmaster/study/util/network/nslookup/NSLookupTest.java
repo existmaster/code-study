@@ -1,4 +1,6 @@
-import com.existmaster.study.NetworkUtil;
+package com.existmaster.study.util.network.nslookup;
+
+import com.existmaster.study.util.network.nslookup.NSLookup;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,17 +13,17 @@ import static org.junit.Assert.fail;
 /**
  * Created by existmaster on 2015. 12. 6..
  */
-public class NetworkUtilTest {
+public class NSLookupTest {
 
     public static final String WRONG_DOMAIN_NAME = "abaaaa.d";
     public static final String NORMAL_DOMAIN_NAME = "c.pineone.net";
     public static final String EXPECTED_IP_ADDRESS = "219.248.137.8";
 
-    private NetworkUtil networkUtil;
+    private NSLookup networkUtil;
 
     @Before
     public void setUp() throws Exception {
-        networkUtil = new NetworkUtil();
+        networkUtil = new NSLookup();
     }
 
     @Test
