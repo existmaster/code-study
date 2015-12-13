@@ -2,6 +2,7 @@ import com.existmaster.study.NetworkUtil;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 import static org.junit.Assert.assertEquals;
@@ -25,8 +26,8 @@ public class NetworkUtilTest {
 
     @Test
     public void NetworkUtil() throws UnknownHostException {
-        String ip = networkUtil.nslookup(NORMAL_DOMAIN_NAME);
-        assertEquals(EXPECTED_IP_ADDRESS, ip);
+        InetAddress[] inetAddresses = networkUtil.nslookup(NORMAL_DOMAIN_NAME);
+        assertEquals(EXPECTED_IP_ADDRESS, inetAddresses[0].getHostAddress());
     }
 
     @Test
